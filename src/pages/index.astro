@@ -15,6 +15,24 @@ const baseUrl = import.meta.env.BASE_URL;
         />
     </head>
     <body>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-container">
+                <div class="logo">
+                    <img
+                        src={`${baseUrl}/logo_minimal.svg`}
+                        alt="Floors for Life"
+                    />
+                </div>
+                <nav class="header-nav">
+                    <a href="tel:7037549797" class="header-phone">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">(703) 754-9797</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
         <!-- Hero Section -->
         <section class="hero">
             <div class="hero-overlay"></div>
@@ -35,10 +53,28 @@ const baseUrl = import.meta.env.BASE_URL;
             <div class="container">
                 <div class="about-grid">
                     <div class="about-image">
-                        <img
-                            src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&h=600&fit=crop"
-                            alt="Professional flooring installation"
-                        />
+                        <div class="collage-grid">
+                            <img
+                                src={`${baseUrl}/collage_1.jpg`}
+                                alt="Flooring installation work"
+                                class="collage-img"
+                            />
+                            <img
+                                src={`${baseUrl}/collage_2.jpg`}
+                                alt="Quality flooring samples"
+                                class="collage-img"
+                            />
+                            <img
+                                src={`${baseUrl}/collage_3.jpg`}
+                                alt="Professional installation"
+                                class="collage-img"
+                            />
+                            <img
+                                src={`${baseUrl}/collage_4.jpg`}
+                                alt="Beautiful finished floors"
+                                class="collage-img"
+                            />
+                        </div>
                     </div>
                     <div class="about-content">
                         <h2>About Floors for Life</h2>
@@ -100,6 +136,18 @@ const baseUrl = import.meta.env.BASE_URL;
                                     </p>
                                 </div>
                             </div>
+
+                            <div class="feature">
+                                <span class="check">✓</span>
+                                <div>
+                                    <strong>Pet-Friendly Carpet Options</strong>
+                                    <p>
+                                        Most carpets include pet resistance
+                                        warranties for easy cleanup and
+                                        long-lasting durability
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +160,7 @@ const baseUrl = import.meta.env.BASE_URL;
                 <div class="personal-service-grid">
                     <div class="personal-service-image">
                         <img
-                            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=600&fit=crop"
+                            src="public/Mike.png"
                             alt="Mike Farahmand - Owner"
                         />
                     </div>
@@ -141,15 +189,6 @@ const baseUrl = import.meta.env.BASE_URL;
                             communication, and someone you can trust who takes
                             pride in every single job.
                         </p>
-
-                        <div class="personal-cta">
-                            <p>
-                                <strong
-                                    >You'll know exactly who to expect at your
-                                    door.</strong
-                                >
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -168,7 +207,7 @@ const baseUrl = import.meta.env.BASE_URL;
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_hardwood.jpg`}
                                 alt="Hardwood Flooring"
                             />
                         </div>
@@ -182,21 +221,21 @@ const baseUrl = import.meta.env.BASE_URL;
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_carpet.jpg`}
                                 alt="Carpet Flooring"
                             />
                         </div>
                         <h3>Carpet</h3>
                         <p>
                             Comfort and warmth with a wide variety of styles and
-                            colors
+                            colors.
                         </p>
                     </div>
 
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_laminate.jpg`}
                                 alt="Laminate Flooring"
                             />
                         </div>
@@ -210,7 +249,7 @@ const baseUrl = import.meta.env.BASE_URL;
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_vinyl.jpg`}
                                 alt="Vinyl Flooring"
                             />
                         </div>
@@ -224,7 +263,7 @@ const baseUrl = import.meta.env.BASE_URL;
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_tile.jpg`}
                                 alt="Tile and Ceramic Flooring"
                             />
                         </div>
@@ -235,7 +274,7 @@ const baseUrl = import.meta.env.BASE_URL;
                     <div class="service-card">
                         <div class="service-image">
                             <img
-                                src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=400&h=300&fit=crop&q=80"
+                                src={`${baseUrl}/flooring_solutions_area_rugs.jpg`}
                                 alt="Area Rugs"
                             />
                         </div>
@@ -260,33 +299,33 @@ const baseUrl = import.meta.env.BASE_URL;
 
                 <div class="brands-grid">
                     <div class="brand-card">
-                        <div class="brand-logo-container">
+                        <a
+                            href="https://www.mohawkflooring.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="brand-logo-container"
+                        >
                             <img
                                 src={`${baseUrl}/Mohawk_Industries_logo.svg`}
                                 alt="Mohawk Flooring"
                                 class="brand-logo-img"
                             />
-                        </div>
+                        </a>
                     </div>
 
                     <div class="brand-card">
-                        <div class="brand-logo-container">
-                            <img
-                                src={`${baseUrl}/Bruce_logo.svg`}
-                                alt="Bruce Flooring"
-                                class="brand-logo-img"
-                            />
-                        </div>
-                    </div>
-
-                    <div class="brand-card">
-                        <div class="brand-logo-container">
+                        <a
+                            href="https://shawfloors.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="brand-logo-container"
+                        >
                             <img
                                 src={`${baseUrl}/Shaw_Industries_logo.svg`}
                                 alt="Shaw Floors"
                                 class="brand-logo-img"
                             />
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -334,12 +373,77 @@ const baseUrl = import.meta.env.BASE_URL;
                 padding: 0 20px;
             }
 
+            /* Header */
+            .site-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
+
+            .header-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0.5rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo img {
+                height: 50px;
+                width: auto;
+                display: block;
+            }
+
+            .header-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .header-phone {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.45rem 1rem;
+                background: #667eea;
+                color: white;
+                text-decoration: none;
+                border-radius: 50px;
+                font-weight: 600;
+                font-size: 0.875rem;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+            }
+
+            .header-phone:hover {
+                background: #5568d3;
+                transform: translateY(-1px);
+                box-shadow: 0 3px 12px rgba(102, 126, 234, 0.35);
+            }
+
+            .phone-icon {
+                font-size: 1.1rem;
+            }
+
+            .phone-number {
+                font-size: 0.9rem;
+            }
+
             /* Hero Section */
             .hero {
                 position: relative;
                 height: 600px;
+                margin-top: 62px;
                 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                background-image: url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop");
+                background-image: url("/floors_for_life/hero_hardwood.jpg");
                 background-size: cover;
                 background-position: center;
                 display: flex;
@@ -507,6 +611,22 @@ const baseUrl = import.meta.env.BASE_URL;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                position: relative;
+            }
+
+            .brand-card::after {
+                content: "↗";
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                color: #667eea;
+                opacity: 0.6;
+                transition: opacity 0.3s ease;
+            }
+
+            .brand-card:hover::after {
+                opacity: 1;
             }
 
             .brand-card:hover {
@@ -519,6 +639,7 @@ const baseUrl = import.meta.env.BASE_URL;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-decoration: none;
             }
 
             .brand-logo-img {
@@ -615,10 +736,31 @@ const baseUrl = import.meta.env.BASE_URL;
                 align-items: center;
             }
 
-            .about-image img {
+            .about-image {
                 width: 100%;
-                border-radius: 12px;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+
+            .collage-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                width: 100%;
+            }
+
+            .collage-img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+            }
+
+            .collage-img:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             }
 
             .about-content h2 {
@@ -697,6 +839,26 @@ const baseUrl = import.meta.env.BASE_URL;
 
             /* Responsive */
             @media (max-width: 768px) {
+                .header-container {
+                    padding: 0.5rem 1rem;
+                }
+
+                .logo img {
+                    height: 44px;
+                }
+
+                .phone-number {
+                    display: none;
+                }
+
+                .header-phone {
+                    padding: 0.5rem 0.85rem;
+                }
+
+                .phone-icon {
+                    font-size: 1.2rem;
+                }
+
                 .hero h1 {
                     font-size: 2.5rem;
                 }
@@ -709,6 +871,10 @@ const baseUrl = import.meta.env.BASE_URL;
                 .personal-service-grid {
                     grid-template-columns: 1fr;
                     gap: 2rem;
+                }
+
+                .collage-img {
+                    height: 180px;
                 }
 
                 .personal-service-image img {
