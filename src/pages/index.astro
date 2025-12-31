@@ -2,7 +2,7 @@
 const baseUrl = import.meta.env.BASE_URL;
 const siteUrl = "https://www.floorsforlifeco.com";
 const title = "Floors for Life - Quality Flooring for Northern Virginia";
-const description = "Full-service, shop-at-home flooring business serving Northern Virginia for over 20 years. Carpet, hardwood, laminate, vinyl, and more.";
+const description = "Shop-at-home flooring experts serving Gainesville, Bristow, Haymarket, and Northern Virginia since 2003. Free in-home consultations for carpet, hardwood, laminate, vinyl, and more.";
 ---
 
 <html lang="en">
@@ -40,20 +40,37 @@ const description = "Full-service, shop-at-home flooring business serving Northe
             "@type": "LocalBusiness",
             "@id": "https://www.floorsforlifeco.com",
             "name": "Floors for Life",
-            "description": "Full-service, shop-at-home flooring business serving Northern Virginia for over 20 years. Carpet, hardwood, laminate, vinyl, and more.",
+            "description": "Shop-at-home flooring experts serving Gainesville, Bristow, Haymarket, and Northern Virginia since 2003. Free in-home consultations for carpet, hardwood, laminate, vinyl, and more.",
             "url": "https://www.floorsforlifeco.com",
             "telephone": "+1-703-754-9797",
             "image": "https://www.floorsforlifeco.com/hero_hardwood.jpg",
             "priceRange": "$$",
             "address": {
                 "@type": "PostalAddress",
+                "streetAddress": "7371 Atlas Walk Way PMB 602",
+                "addressLocality": "Gainesville",
                 "addressRegion": "VA",
+                "postalCode": "20155",
                 "addressCountry": "US"
             },
-            "areaServed": {
-                "@type": "Place",
-                "name": "Northern Virginia"
-            },
+            "areaServed": [
+                {"@type": "City", "name": "Gainesville", "sameAs": "https://en.wikipedia.org/wiki/Gainesville,_Virginia"},
+                {"@type": "City", "name": "Bristow", "sameAs": "https://en.wikipedia.org/wiki/Bristow,_Virginia"},
+                {"@type": "City", "name": "Haymarket", "sameAs": "https://en.wikipedia.org/wiki/Haymarket,_Virginia"},
+                {"@type": "City", "name": "Manassas", "sameAs": "https://en.wikipedia.org/wiki/Manassas,_Virginia"},
+                {"@type": "City", "name": "Centreville", "sameAs": "https://en.wikipedia.org/wiki/Centreville,_Virginia"},
+                {"@type": "City", "name": "Warrenton", "sameAs": "https://en.wikipedia.org/wiki/Warrenton,_Virginia"},
+                {"@type": "City", "name": "Nokesville"},
+                {"@type": "City", "name": "Catharpin"},
+                {"@type": "AdministrativeArea", "name": "Prince William County"},
+                {"@type": "AdministrativeArea", "name": "Fauquier County"},
+                {"@type": "AdministrativeArea", "name": "Northern Virginia"}
+            ],
+            "sameAs": [
+                "https://www.yelp.com/biz/floors-for-life-gainesville",
+                "https://www.bbb.org/us/va/gainesville/profile/floor-installation/floors-for-life-0241-152412166",
+                "https://www.angi.com/companylist/us/va/gainesville/floors-for-life-reviews-220082.htm"
+            ],
             "founder": {
                 "@type": "Person",
                 "name": "Mike Farahmand"
@@ -127,8 +144,7 @@ const description = "Full-service, shop-at-home flooring business serving Northe
             <div class="hero-content">
                 <h1>Transform Your Home with Quality Flooring</h1>
                 <p class="hero-subtitle">
-                    Northern Virginia's Trusted Shop-at-Home Flooring Experts
-                    Since 2003
+                    Trusted Shop-at-Home Flooring Experts Serving Gainesville, Bristow, Haymarket & Northern Virginia Since 2003
                 </p>
                 <a href="tel:7037549797" class="cta-button"
                     >Call (703) 754-9797</a
@@ -172,9 +188,10 @@ const description = "Full-service, shop-at-home flooring business serving Northe
                         <h2>About Floors for Life</h2>
                         <p>
                             Floors for Life is a full-service, shop-at-home
-                            business for all your flooring needs. We've been in
-                            business for over 20 years providing high-quality,
-                            affordable flooring to the Northern Virginia area.
+                            business for all your flooring needs. Based in Gainesville, VA,
+                            we've been providing high-quality, affordable flooring to
+                            Bristow, Haymarket, Manassas, Centreville, and the greater
+                            Northern Virginia area for over 20 years.
                         </p>
 
                         <p>
@@ -443,8 +460,7 @@ const description = "Full-service, shop-at-home flooring business serving Northe
         <footer>
             <div class="container">
                 <p>
-                    &copy; 2025 Floors for Life. Serving Northern Virginia with
-                    quality flooring for over 20 years.
+                    &copy; 2025 Floors for Life. Proudly serving Gainesville, Bristow, Haymarket, Manassas, Centreville, and all of Northern Virginia with quality flooring for over 20 years.
                 </p>
             </div>
         </footer>
