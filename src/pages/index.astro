@@ -1,18 +1,108 @@
 ---
 const baseUrl = import.meta.env.BASE_URL;
+const siteUrl = "https://www.floorsforlifeco.com";
+const title = "Floors for Life - Quality Flooring for Northern Virginia";
+const description = "Full-service, shop-at-home flooring business serving Northern Virginia for over 20 years. Carpet, hardwood, laminate, vinyl, and more.";
 ---
 
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href={`/favicon.svg`} />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
-        <title>Floors for Life - Quality Flooring for Northern Virginia</title>
-        <meta
-            name="description"
-            content="Full-service, shop-at-home flooring business serving Northern Virginia for over 20 years. Carpet, hardwood, laminate, vinyl, and more."
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={siteUrl} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${siteUrl}/hero_hardwood.jpg`} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Floors for Life" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={siteUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={`${siteUrl}/hero_hardwood.jpg`} />
+
+        <!-- Local Business Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "@id": "https://www.floorsforlifeco.com",
+            "name": "Floors for Life",
+            "description": "Full-service, shop-at-home flooring business serving Northern Virginia for over 20 years. Carpet, hardwood, laminate, vinyl, and more.",
+            "url": "https://www.floorsforlifeco.com",
+            "telephone": "+1-703-754-9797",
+            "image": "https://www.floorsforlifeco.com/hero_hardwood.jpg",
+            "priceRange": "$$",
+            "address": {
+                "@type": "PostalAddress",
+                "addressRegion": "VA",
+                "addressCountry": "US"
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "Northern Virginia"
+            },
+            "founder": {
+                "@type": "Person",
+                "name": "Mike Farahmand"
+            },
+            "foundingDate": "2008",
+            "knowsAbout": ["Hardwood Flooring", "Carpet Installation", "Laminate Flooring", "Vinyl Flooring", "Tile Installation", "Area Rugs"],
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Flooring Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Hardwood Flooring Installation"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Carpet Installation"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Laminate Flooring Installation"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Vinyl Flooring Installation"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Tile and Ceramic Installation"
+                        }
+                    }
+                ]
+            }
+        }
+        </script>
     </head>
 
     <body>
@@ -56,21 +146,25 @@ const baseUrl = import.meta.env.BASE_URL;
                                 src={`/about_us_collage_1.jpg`}
                                 alt="Flooring installation work"
                                 class="collage-img"
+                                loading="lazy"
                             />
                             <img
                                 src={`/about_us_collage_2.jpg`}
                                 alt="Quality flooring samples"
                                 class="collage-img"
+                                loading="lazy"
                             />
                             <img
                                 src={`/about_us_collage_3.jpg`}
                                 alt="Professional installation"
                                 class="collage-img"
+                                loading="lazy"
                             />
                             <img
                                 src={`/about_us_collage_4.jpg`}
                                 alt="Beautiful finished floors"
                                 class="collage-img"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -157,7 +251,7 @@ const baseUrl = import.meta.env.BASE_URL;
             <div class="container">
                 <div class="personal-service-grid">
                     <div class="personal-service-image">
-                        <img src={`/mike.jpg`} alt="Mike Farahmand - Owner" />
+                        <img src={`/mike.jpg`} alt="Mike Farahmand - Owner" loading="lazy" />
                     </div>
                     <div class="personal-service-content">
                         <h2>One Point of Contact, Start to Finish</h2>
@@ -204,6 +298,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_hardwood.jpg`}
                                 alt="Hardwood Flooring"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Hardwood</h3>
@@ -218,6 +313,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_carpet.jpg`}
                                 alt="Carpet Flooring"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Carpet</h3>
@@ -232,6 +328,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_laminate.jpg`}
                                 alt="Laminate Flooring"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Laminate</h3>
@@ -246,6 +343,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_vinyl.jpg`}
                                 alt="Vinyl Flooring"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Vinyl</h3>
@@ -260,6 +358,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_tile.jpg`}
                                 alt="Tile and Ceramic Flooring"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Tile & Ceramics</h3>
@@ -271,6 +370,7 @@ const baseUrl = import.meta.env.BASE_URL;
                             <img
                                 src={`/flooring_solutions_area_rugs.jpg`}
                                 alt="Area Rugs"
+                                loading="lazy"
                             />
                         </div>
                         <h3>Area Rugs</h3>
@@ -304,6 +404,7 @@ const baseUrl = import.meta.env.BASE_URL;
                                 src={`/brands_mohawk.svg`}
                                 alt="Mohawk Flooring"
                                 class="brand-logo-img"
+                                loading="lazy"
                             />
                         </a>
                     </div>
@@ -319,6 +420,7 @@ const baseUrl = import.meta.env.BASE_URL;
                                 src={`/brands_shaw.svg`}
                                 alt="Shaw Floors"
                                 class="brand-logo-img"
+                                loading="lazy"
                             />
                         </a>
                     </div>

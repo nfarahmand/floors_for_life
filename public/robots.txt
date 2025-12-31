@@ -1,0 +1,8 @@
+# Robots.txt for Floors for Life
+# https://www.floorsforlifeco.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.floorsforlifeco.com/sitemap-index.xml
