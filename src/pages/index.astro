@@ -460,8 +460,13 @@ const description = "Shop-at-home flooring experts serving Gainesville, Bristow,
         <footer>
             <div class="container">
                 <p>
-                    &copy; 2025 Floors for Life. Proudly serving Gainesville, Bristow, Haymarket, Manassas, Centreville, and all of Northern Virginia with quality flooring for over 20 years.
+                    &copy; 2025 Floors for Life. Serving Gainesville, Bristow, Haymarket & Northern Virginia for over 20 years.
                 </p>
+                <div class="footer-links">
+                    <a href="/flooring-gainesville-va/">Gainesville</a>
+                    <a href="/flooring-bristow-va/">Bristow</a>
+                    <a href="/flooring-haymarket-va/">Haymarket</a>
+                </div>
             </div>
         </footer>
 
@@ -948,6 +953,24 @@ const description = "Shop-at-home flooring experts serving Gainesville, Bristow,
                 color: white;
                 padding: 2rem 0;
                 text-align: center;
+            }
+
+            .footer-links {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-links a:hover {
+                color: white;
             }
 
             /* Responsive */

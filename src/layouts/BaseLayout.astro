@@ -1,0 +1,509 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    canonicalPath?: string;
+    schema?: string;
+}
+
+const { title, description, canonicalPath = "", schema } = Astro.props;
+const siteUrl = "https://www.floorsforlifeco.com";
+const canonicalUrl = `${siteUrl}${canonicalPath}`;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <!-- Canonical URL -->
+        <link rel="canonical" href={canonicalUrl} />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${siteUrl}/hero_hardwood.jpg`} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Floors for Life" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={canonicalUrl} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={`${siteUrl}/hero_hardwood.jpg`} />
+
+        <!-- Schema Markup -->
+        {schema && <script type="application/ld+json" set:html={schema} />}
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="header-container">
+                <a href="/" class="logo">
+                    <img src="/logo_minimal.svg" alt="Floors for Life" />
+                </a>
+                <nav class="header-nav">
+                    <a href="tel:7037549797" class="header-phone">
+                        <span class="phone-icon">📞</span>
+                        <span class="phone-number">(703) 754-9797</span>
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <slot />
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <p class="footer-copyright">
+                        &copy; 2025 Floors for Life. Serving Gainesville, Bristow, Haymarket & Northern Virginia for over 20 years.
+                    </p>
+                    <div class="footer-links">
+                        <a href="/">Home</a>
+                        <a href="/flooring-gainesville-va/">Gainesville</a>
+                        <a href="/flooring-bristow-va/">Bristow</a>
+                        <a href="/flooring-haymarket-va/">Haymarket</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <style is:global>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, sans-serif;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            /* Header */
+            .site-header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+                transition: all 0.3s ease;
+            }
+
+            .header-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0.5rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                display: block;
+            }
+
+            .logo img {
+                height: 50px;
+                width: auto;
+                display: block;
+            }
+
+            .header-nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .header-phone {
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.45rem 1rem;
+                background: #667eea;
+                color: white;
+                text-decoration: none;
+                border-radius: 50px;
+                font-weight: 600;
+                font-size: 0.875rem;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+            }
+
+            .header-phone:hover {
+                background: #5568d3;
+                transform: translateY(-1px);
+                box-shadow: 0 3px 12px rgba(102, 126, 234, 0.35);
+            }
+
+            .phone-icon {
+                font-size: 1.1rem;
+            }
+
+            .phone-number {
+                font-size: 0.9rem;
+            }
+
+            /* Hero Section */
+            .hero {
+                position: relative;
+                height: 500px;
+                margin-top: 62px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background-image: url("/hero_hardwood.jpg");
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: white;
+            }
+
+            .hero-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 1;
+                max-width: 800px;
+                padding: 20px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                font-weight: 700;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .cta-button {
+                display: inline-block;
+                background: #ff6b6b;
+                color: white;
+                padding: 1rem 2.5rem;
+                text-decoration: none;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            }
+
+            .cta-button:hover {
+                background: #ff5252;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+            }
+
+            .cta-button.large {
+                padding: 1.25rem 3rem;
+                font-size: 1.3rem;
+            }
+
+            /* Section Styles */
+            .section-subtitle {
+                text-align: center;
+                font-size: 1.2rem;
+                color: #666;
+                margin-bottom: 3rem;
+            }
+
+            /* Services Section */
+            .services {
+                padding: 5rem 0;
+                background: #f8f9fa;
+            }
+
+            .services h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #2c3e50;
+            }
+
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .service-card {
+                background: white;
+                padding: 0;
+                border-radius: 12px;
+                text-align: center;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+            }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .service-image {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .service-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .service-card:hover .service-image img {
+                transform: scale(1.05);
+            }
+
+            .service-card h3 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 1rem;
+                color: #2c3e50;
+                padding: 0 2rem;
+            }
+
+            .service-card p {
+                color: #666;
+                line-height: 1.6;
+                padding: 0 2rem 2rem;
+            }
+
+            /* Why Choose Us Section */
+            .why-choose-us {
+                padding: 5rem 0;
+                background: white;
+            }
+
+            .why-choose-us h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #2c3e50;
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .benefit-card {
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .benefit-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.3rem;
+                color: #2c3e50;
+                margin-bottom: 0.75rem;
+            }
+
+            .benefit-card p {
+                color: #666;
+                line-height: 1.6;
+            }
+
+            /* Service Area Section */
+            .service-area {
+                padding: 4rem 0;
+                background: #f8f9fa;
+            }
+
+            .service-area h2 {
+                text-align: center;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                color: #2c3e50;
+            }
+
+            .area-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                list-style: none;
+            }
+
+            .area-list li {
+                background: white;
+                padding: 0.75rem 1.5rem;
+                border-radius: 50px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                color: #2c3e50;
+                font-weight: 500;
+            }
+
+            .area-list li a {
+                color: #667eea;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            .area-list li a:hover {
+                text-decoration: underline;
+            }
+
+            /* CTA Section */
+            .cta {
+                padding: 5rem 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                text-align: center;
+            }
+
+            .cta h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .cta p {
+                font-size: 1.3rem;
+                margin-bottom: 2rem;
+            }
+
+            /* Intro Section */
+            .intro {
+                padding: 4rem 0;
+                background: white;
+            }
+
+            .intro .container {
+                max-width: 800px;
+            }
+
+            .intro p {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                color: #555;
+                text-align: center;
+            }
+
+            /* Footer */
+            footer {
+                background: #2c3e50;
+                color: white;
+                padding: 2rem 0;
+            }
+
+            .footer-content {
+                text-align: center;
+            }
+
+            .footer-copyright {
+                margin-bottom: 1rem;
+            }
+
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                flex-wrap: wrap;
+            }
+
+            .footer-links a {
+                color: rgba(255, 255, 255, 0.8);
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+
+            .footer-links a:hover {
+                color: white;
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .header-container {
+                    padding: 0.5rem 1rem;
+                }
+
+                .logo img {
+                    height: 44px;
+                }
+
+                .phone-number {
+                    display: none;
+                }
+
+                .header-phone {
+                    padding: 0.5rem 0.85rem;
+                }
+
+                .phone-icon {
+                    font-size: 1.2rem;
+                }
+
+                .hero h1 {
+                    font-size: 2.2rem;
+                }
+
+                .hero-subtitle {
+                    font-size: 1.1rem;
+                }
+
+                .services-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .services h2,
+                .why-choose-us h2,
+                .cta h2 {
+                    font-size: 2rem;
+                }
+
+                .footer-links {
+                    gap: 1rem;
+                }
+            }
+        </style>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Flooring Services in Bristow, VA | Floors for Life";
+const description = "Expert flooring installation in Bristow, VA. Shop-at-home service for hardwood, carpet, laminate, vinyl & tile. Free in-home consultations. Call (703) 754-9797.";
+
+const schema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.floorsforlifeco.com/flooring-bristow-va/",
+    "name": "Floors for Life - Bristow",
+    "description": description,
+    "url": "https://www.floorsforlifeco.com/flooring-bristow-va/",
+    "telephone": "+1-703-754-9797",
+    "image": "https://www.floorsforlifeco.com/hero_hardwood.jpg",
+    "priceRange": "$$",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7371 Atlas Walk Way PMB 602",
+        "addressLocality": "Gainesville",
+        "addressRegion": "VA",
+        "postalCode": "20155",
+        "addressCountry": "US"
+    },
+    "areaServed": {
+        "@type": "City",
+        "name": "Bristow",
+        "sameAs": "https://en.wikipedia.org/wiki/Bristow,_Virginia"
+    },
+    "parentOrganization": {
+        "@type": "LocalBusiness",
+        "name": "Floors for Life",
+        "url": "https://www.floorsforlifeco.com"
+    }
+});
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/flooring-bristow-va/" schema={schema}>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bristow, VA Flooring Experts</h1>
+            <p class="hero-subtitle">
+                Professional Shop-at-Home Flooring Services for Bristow Homeowners
+            </p>
+            <a href="tel:7037549797" class="cta-button">Call (703) 754-9797</a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <p>
+                Searching for quality flooring in Bristow, VA? Floors for Life makes flooring easy with our shop-at-home service. We bring samples directly to your Bristow home so you can see exactly how your new floors will look. With over 20 years serving Prince William County, we're the trusted choice for Bristow families.
+            </p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2>Flooring Services in Bristow</h2>
+            <p class="section-subtitle">
+                Expert installation for every room in your Bristow home
+            </p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_hardwood.jpg" alt="Hardwood Flooring in Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Hardwood</h3>
+                    <p>Classic elegance and timeless beauty that adds value to your home</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_carpet.jpg" alt="Carpet Installation Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Carpet</h3>
+                    <p>Comfort and warmth with a wide variety of styles and colors</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_laminate.jpg" alt="Laminate Flooring Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Laminate</h3>
+                    <p>Durable, affordable, and easy to maintain for busy households</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_vinyl.jpg" alt="Vinyl Flooring Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Vinyl</h3>
+                    <p>Waterproof and versatile, perfect for kitchens and bathrooms</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_tile.jpg" alt="Tile Flooring Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Tile & Ceramics</h3>
+                    <p>Elegant and long-lasting solutions for any space</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/flooring_solutions_area_rugs.jpg" alt="Area Rugs Bristow VA" loading="lazy" />
+                    </div>
+                    <h3>Area Rugs</h3>
+                    <p>Add style and comfort to complement your existing floors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Why Bristow Chooses Floors for Life</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏠</div>
+                    <h3>Shop-at-Home Convenience</h3>
+                    <p>We bring samples directly to your Bristow home. See how floors look in your actual lighting and space.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">👨‍🔧</div>
+                    <h3>40 Years Experience</h3>
+                    <p>Owner Mike Farahmand personally oversees every project from consultation to final installation.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Your Local Experts</h3>
+                    <p>Based in nearby Gainesville, we know Bristow and are committed to our Prince William County community.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>One-Year Warranty</h3>
+                    <p>Every installation comes with a limited warranty for your peace of mind.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Free Estimates</h3>
+                    <p>No-obligation quotes with transparent pricing. Know exactly what to expect before you commit.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Top Brand Partners</h3>
+                    <p>We work with industry leaders like Mohawk and Shaw to bring you the best quality flooring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+        <div class="container">
+            <h2>Also Serving Nearby Communities</h2>
+            <ul class="area-list">
+                <li><a href="/flooring-gainesville-va/">Gainesville</a></li>
+                <li><a href="/flooring-haymarket-va/">Haymarket</a></li>
+                <li>Manassas</li>
+                <li>Nokesville</li>
+                <li>Centreville</li>
+                <li>Catharpin</li>
+                <li>Warrenton</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for New Floors in Bristow?</h2>
+            <p>Schedule your free in-home consultation today</p>
+            <a href="tel:7037549797" class="cta-button large">Call (703) 754-9797</a>
+        </div>
+    </section>
+</BaseLayout>
