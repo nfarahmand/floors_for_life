@@ -445,6 +445,39 @@ const description = "Shop-at-home flooring experts serving Gainesville, Bristow,
             </div>
         </section>
 
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <p class="section-subtitle">
+                    See why homeowners across Northern Virginia trust us with their flooring
+                </p>
+
+                <!-- Google Reviews Widget - Replace this comment with your widget embed code -->
+                <div class="reviews-widget" id="google-reviews">
+                    <!--
+                    To add your Google Reviews widget:
+                    1. Go to https://www.sociablekit.com/free-widgets/free-google-reviews-widget-website/
+                    2. Search for "Floors for Life" or enter your Place ID
+                    3. Customize the widget appearance
+                    4. Copy the embed code and paste it here (replacing this comment)
+                    -->
+                </div>
+
+                <div class="review-cta">
+                    <p>Had a great experience? We'd love to hear from you!</p>
+                    <a
+                        href="https://g.page/r/CQzFJ4ES_KnbEBM/review"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="review-button"
+                    >
+                        Leave Us a Review on Google
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="cta">
             <div class="container">
@@ -929,6 +962,58 @@ const description = "Shop-at-home flooring experts serving Gainesville, Bristow,
                 color: #666;
             }
 
+            /* Reviews Section */
+            .reviews {
+                padding: 5rem 0;
+                background: #f8f9fa;
+            }
+
+            .reviews h2 {
+                text-align: center;
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #2c3e50;
+            }
+
+            .reviews-widget {
+                min-height: 200px;
+                margin: 2rem 0;
+            }
+
+            .review-cta {
+                text-align: center;
+                margin-top: 2rem;
+                padding-top: 2rem;
+                border-top: 1px solid #e0e0e0;
+            }
+
+            .review-cta p {
+                font-size: 1.1rem;
+                color: #555;
+                margin-bottom: 1rem;
+            }
+
+            .review-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: #4285f4;
+                color: white;
+                padding: 1rem 2rem;
+                text-decoration: none;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+            }
+
+            .review-button:hover {
+                background: #3367d6;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+            }
+
             /* CTA Section */
             .cta {
                 padding: 5rem 0;
@@ -1024,6 +1109,7 @@ const description = "Shop-at-home flooring experts serving Gainesville, Bristow,
 
                 .services h2,
                 .brands h2,
+                .reviews h2,
                 .about-content h2,
                 .personal-service-content h2,
                 .cta h2 {
