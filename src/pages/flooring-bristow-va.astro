@@ -4,35 +4,72 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = "Flooring Services in Bristow, VA | Floors for Life";
 const description = "Expert flooring installation in Bristow, VA. Shop-at-home service for hardwood, carpet, laminate, vinyl, & tile. Free in-home consultations. Call (703) 754-9797.";
 
-const schema = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://www.floorsforlifeco.com/flooring-bristow-va/",
-    "name": "Floors for Life - Bristow",
-    "description": description,
-    "url": "https://www.floorsforlifeco.com/flooring-bristow-va/",
-    "telephone": "+1-703-754-9797",
-    "image": "https://www.floorsforlifeco.com/hero_hardwood.jpg",
-    "priceRange": "$$",
-    "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "7371 Atlas Walk Way PMB 602",
-        "addressLocality": "Gainesville",
-        "addressRegion": "VA",
-        "postalCode": "20155",
-        "addressCountry": "US"
+const faqs = [
+    {
+        question: "How much does flooring installation cost in Bristow, VA?",
+        answer: "Flooring costs vary based on material and square footage. We offer free in-home estimates in Bristow with transparent pricing—no hidden fees. Call (703) 754-9797 for a personalized quote."
     },
-    "areaServed": {
-        "@type": "City",
-        "name": "Bristow",
-        "sameAs": "https://en.wikipedia.org/wiki/Bristow,_Virginia"
+    {
+        question: "Do you offer free estimates in Bristow?",
+        answer: "Yes! We provide free in-home consultations throughout Bristow, VA 20136 and surrounding areas. We bring samples to your home so you can see how floors look in your space."
     },
-    "parentOrganization": {
-        "@type": "LocalBusiness",
-        "name": "Floors for Life",
-        "url": "https://www.floorsforlifeco.com"
+    {
+        question: "What flooring types do you install in Bristow?",
+        answer: "We install hardwood, carpet, laminate, luxury vinyl plank (LVP), tile, and ceramic flooring. We also offer area rugs to complement your new floors."
+    },
+    {
+        question: "How long does flooring installation take?",
+        answer: "Most rooms can be completed in 1-2 days. Whole-home installations typically take 3-5 days depending on the scope. We handle furniture moving and complete cleanup."
+    },
+    {
+        question: "Do you serve areas outside Bristow?",
+        answer: "Yes, we serve all of Prince William County including Gainesville, Haymarket, Manassas, Centreville, Nokesville, and Catharpin, as well as parts of Fauquier County."
     }
-});
+];
+
+const schema = JSON.stringify([
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.floorsforlifeco.com/flooring-bristow-va/",
+        "name": "Floors for Life - Bristow",
+        "description": description,
+        "url": "https://www.floorsforlifeco.com/flooring-bristow-va/",
+        "telephone": "+1-703-754-9797",
+        "image": "https://www.floorsforlifeco.com/hero_hardwood.jpg",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7371 Atlas Walk Way PMB 602",
+            "addressLocality": "Gainesville",
+            "addressRegion": "VA",
+            "postalCode": "20155",
+            "addressCountry": "US"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Bristow",
+            "sameAs": "https://en.wikipedia.org/wiki/Bristow,_Virginia"
+        },
+        "parentOrganization": {
+            "@type": "LocalBusiness",
+            "name": "Floors for Life",
+            "url": "https://www.floorsforlifeco.com"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    }
+]);
 ---
 
 <BaseLayout title={title} description={description} canonicalPath="/flooring-bristow-va/" schema={schema}>
@@ -169,6 +206,21 @@ const schema = JSON.stringify({
                 <li>Catharpin</li>
                 <li>Warrenton</li>
             </ul>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                {faqs.map(faq => (
+                    <div class="faq-item">
+                        <h3>{faq.question}</h3>
+                        <p>{faq.answer}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     </section>
 
