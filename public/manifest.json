@@ -1,0 +1,14 @@
+{
+  "name": "Floors for Life",
+  "short_name": "Floors for Life",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#667eea",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
